@@ -37,7 +37,8 @@ stoplist = stopwords.words('english')
 
 # 2. TO RUN
 # python filter.py <testfile.txt>
-# ensure that finalised.clf 
+# Ensure that finalised.clf is in folder or path
+# Uncomment the commented sections for detailed classification metrics
 
 
 #initialise input lists, read from folder
@@ -50,7 +51,7 @@ def init_lists(folder):
     f.close()
     return a_list
 
-# preprocessing steps
+# preprocessing steps - lemmatization and trigrams
 def preprocess(sentence):
     lemmatizer = WordNetLemmatizer()
     return [lemmatizer.lemmatize(word) for word in word_tokenize(unicode(sentence, errors='ignore'))]
