@@ -1,3 +1,5 @@
+# Spam classifier written in Python
+
 ****************************************************************
 
 To run spam filter from command line:
